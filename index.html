@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Rubik:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
   <script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.4/dist/alpine.min.js"></script>
   <title>Team Diamond</title>
@@ -31,7 +30,7 @@
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
                   <div class="w-36 md:w-40 lg:w-44">
-                    <a href="#">
+                    <a href="/">
                       <span class="sr-only">Workflow</span>
                       <img class="w-full" src="./img/td-logo.png">
                     </a>
@@ -51,26 +50,24 @@
                   </div>
                 </div>
               </div>
-              <div class="hidden md:block md:ml-16 md:space-x-8 text-blue-300">
-                <a href="#" class="font-medium hover:border-b-2 hover:border-t-2 border-blue-300">Classes</a>
-                <a href="#" class="font-medium hover:border-b-2 hover:border-t-2 border-blue-300">Instructors</a>
-                <a href="#" class="font-medium hover:border-b-2 hover:border-t-2 border-blue-300">About</a>
-                <a href="#" class="font-medium hover:border-b-2 hover:border-t-2 border-blue-300">Contact Us</a>
+              <div class="hidden md:block md:ml-16 md:space-x-8 text-blue-300 ">
+                <a href="#"
+                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Classes</a>
+                <a href="#"
+                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Instructors</a>
+                <a href="#"
+                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">About</a>
+                <a href="#"
+                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Contact
+                  Us</a>
               </div>
             </nav>
           </div>
-          <!--
-            Mobile menu, show/hide based on menu open state.
-  
-            Entering: "duration-150 ease-out"
-              From: "opacity-0 scale-95" 
-              To: "opacity-100 scale-100"
-            Leaving: "duration-100 ease-in"
-              From: "opacity-100 scale-100"
-              To: "opacity-0 scale-95"
-          -->
-          <div x-show="menuOpen" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div class="rounded-lg shadow-md bg-trueGrey-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
+
+          <!-- Mobile menu, show/hide based on menu open state. -->
+          <div x-show.transition.duration.150ms="menuOpen"
+            class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="rounded-lg shadow-md bg-trueGrey-50 ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div class="h-8 w-8">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -102,7 +99,7 @@
                 </div>
                 <div class="-mr-2">
                   <button @click="menuOpen = false" type="button"
-                    class="bg-trueGrey-800 rounded-md p-2 inline-flex items-center justify-center text-trueGrey-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300">
+                    class="bg-trueGrey-50 rounded-md p-2 inline-flex items-center justify-center text-trueGrey-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300">
                     <span class="sr-only">Close main menu</span>
                     <!-- Heroicon name: outline/x -->
                     <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -112,11 +109,11 @@
                   </button>
                 </div>
               </div>
-              <div class="px-2 pt-2 pb-3 space-y-1 text-trueGrey-50">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Product</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Features</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Marketplace</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Company</a>
+              <div class="px-2 pt-2 pb-3 space-y-1 text-trueGrey-800">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Classes</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Timetable</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
               </div>
             </div>
           </div>
@@ -125,8 +122,8 @@
         <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div class="sm:text-center lg:text-left">
             <h1 class="text-4xl tracking-tight font-bold text-grey-50 sm:text-5xl md:text-6xl">
-              <span class="block xl:inline">Lorem ipsum dolor sit.</span>
-              <span class="block text-blue-300 xl:inline">ipsum dolor.</span>
+              <span class="block xl:inline">The home of</span>
+              <span class="block text-blue-300 xl:inline">champions.</span>
             </h1>
             <p
               class="mt-3 text-base text-trueGrey-50 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
@@ -152,9 +149,7 @@
       </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-        alt="">
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="./img/hero-img.webp" alt="">
     </div>
   </div>
   <section>

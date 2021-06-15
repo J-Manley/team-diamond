@@ -27,7 +27,6 @@ module.exports = {
         rose: colors.rose,
       },
 
-      fontFamily: { damion: ["'Damion'", "cursive"] },
       fontFamily: { rubik: ["'Rubik'", "helvetica", "sans-serif"] },
     },
   },
