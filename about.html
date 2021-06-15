@@ -1,23 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./img/diamond.svg" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Rubik:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
   <script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.4/dist/alpine.min.js"></script>
   <title>Team Diamond - About</title>
 </head>
 
-<body>
-
+<body class="bg-trueGrey-50 font-rubik min-h-screen">
+  <div id="hero" class="relative bg-trueGrey-800 overflow-hidden mb-8 lg:mb-12">
+    <div class="max-w-7xl mx-auto">
+      <div x-data="{ menuOpen: false }"
+        class="relative z-10 bg-trueGrey-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <div>
+          <div class="relative pt-6 px-4 sm:px-6 lg:pl-6 lg:pr-0">
+            <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                <div class="flex items-center justify-between w-full md:w-auto">
+                  <div class="w-36 md:w-40 lg:w-44">
+                    <a href="/">
+                      <span class="sr-only">Team Diamond</span>
+                      <img class="w-full" src="./img/td-logo.png" alt="Team Diamond logo">
+                    </a>
+                  </div>
+                  <div class="-mr-2 flex items-center md:hidden">
+                    <button @click="menuOpen = true" type="button"
+                      class="bg-trueGrey-800 rounded-md p-2 inline-flex items-center justify-center text-blue-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300"
+                      aria-expanded="false">
+                      <span class="sr-only">Open main menu</span>
+                      <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <ul class="hidden md:block md:ml-16 md:space-x-8 text-blue-300 ">
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Classes</a>
+                </li>
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Instructors</a>
+                </li>
+                <li class="inline"><a href="./about.html"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">About</a>
+                </li>
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Contact
+                    Us</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="mobile__menu" x-show.transition.duration.150ms="menuOpen"
+            class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="rounded-lg shadow-md bg-trueGrey-50 ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="px-5 pt-4 flex items-center justify-between">
+                <div class="h-8 w-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="#70bbef" d="M145.454 209.709L249.289 483.58h12.345l103.834-273.871z" />
+                    <path
+                      d="M232.914 474.449c4.335 4.886 10.17 7.927 16.375 9.132L145.454 209.71.322 163.994c.661 4.906-15.025-18.303 232.592 310.455z"
+                      fill="#9cd7f2" />
+                    <path
+                      d="M51.695 180.177L.322 163.995c.661 4.905-15.024-18.304 232.592 310.453 3.21 3.618 7.245 6.219 11.642 7.817L51.695 180.177z"
+                      fill="#71c5db" />
+                    <g fill="#9cd7f2">
+                      <path
+                        d="M86.074 51.099l59.38 158.611L255.461 84.212l-167.38-34.11c-.727.316-1.4.651-2.007.997zM365.468 209.71L261.634 483.58c6.205-1.205 12.039-4.246 16.375-9.132 64.394-85.292 233.353-308.79 233.863-310.854L365.468 209.71zM365.468 209.71l59.361-158.56c-.7-.398-1.396-.735-2.074-1.03L255.461 84.212 365.468 209.71z" />
+                    </g>
+                    <path fill="#57addd" d="M145.454 209.709h220.014L255.461 84.212z" />
+                    <path
+                      d="M86.074 51.099c-3.916 2.227-4.52 3.544-10.676 11.438C-4.743 165.306-.551 157.536.322 163.994l145.132 45.715-59.38-158.61z"
+                      fill="#70bbef" />
+                    <path
+                      d="M51.695 180.177L87.063 53.74l-.989-2.642c-3.915 2.227-4.52 3.544-10.676 11.438-80.142 102.77-75.949 95-75.077 101.458l51.374 16.183z"
+                      fill="#57addd" />
+                    <path
+                      d="M365.468 209.71l146.403-46.115c.413-2.149-.209-3.422-1.25-4.756-72.603-93.205-82.672-106.93-85.792-107.689l-59.361 158.56z"
+                      fill="#70bbef" />
+                    <path
+                      d="M255.461 84.212L422.756 50.12c-3.521-1.527-6.327-1.748-6.433-1.767l-134.829-18.16c-42.419-5.714-60.701 2.923-187.247 18.208-.195.042-2.915.287-6.166 1.702l167.38 34.109z"
+                      fill="#57addd" />
+                  </svg>
+                </div>
+                <div class="-mr-2">
+                  <button @click="menuOpen = false" type="button"
+                    class="bg-trueGrey-50 rounded-md p-2 inline-flex items-center justify-center text-trueGrey-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300">
+                    <span class="sr-only">Close main menu</span>
+                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="px-2 pt-2 pb-3 space-y-1 text-trueGrey-800">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Classes</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Timetable</a>
+                <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <header
+          class="text-center lg:text-right mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <div class="mb-28">
+            <h1 class="text-4xl tracking-tight font-bold text-trueGrey-50 sm:text-5xl md:text-6xl">
+              About <span class="text-blue-300">us.</span>
+            </h1>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-white">
+    <div
+      class="max-w-7xl mx-auto py-4 lg:py-10 px-4 sm:px-6 lg:px-8 md:flex md:items-center justify-center md:justify-between">
+      <div class="flex justify-center space-x-6 md:order-2">
+        <a href="mailto:beastmasters-nantwich@hotmail.com"
+          class="text-xl md:text-2xl transition transform duration-300 text-trueGrey-400 ease-in-out hover:scale-125 hover:text-blue-300"
+          alt="email"><i class="far fa-envelope"></i></a>
+        <a href="https://www.facebook.com/beastmastersnantwich/" target="_blank" rel="noopener noreferrer"
+          class="text-xl md:text-2xl transition transform duration-300 text-trueGrey-400 ease-in-out hover:scale-125 hover:text-blue-300"
+          alt="facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="mt-4 md:mt-0 md:order-1">
+        <p class="text-center text-base text-trueGrey-400">
+          &copy; 2021 Team Diamond. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
+
+
+<script type="module" src="/main.js"></script>
 
 </html>
