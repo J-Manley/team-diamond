@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="./img/diamond.svg" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,8 +15,8 @@
   <title>Team Diamond</title>
 </head>
 
-<body class="font-rubik min-h-screen">
-  <div class="relative bg-trueGrey-800 overflow-hidden">
+<body class="bg-trueGrey-50 font-rubik min-h-screen">
+  <div id="hero" class="relative bg-trueGrey-800 overflow-hidden mb-8 lg:mb-12">
     <div class="max-w-7xl mx-auto">
       <div x-data="{ menuOpen: false }"
         class="relative z-10 pb-8 bg-trueGrey-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -31,8 +31,8 @@
                 <div class="flex items-center justify-between w-full md:w-auto">
                   <div class="w-36 md:w-40 lg:w-44">
                     <a href="/">
-                      <span class="sr-only">Workflow</span>
-                      <img class="w-full" src="./img/td-logo.png">
+                      <span class="sr-only">Team Diamond</span>
+                      <img class="w-full" src="./img/td-logo.png" alt="Team Diamond logo">
                     </a>
                   </div>
                   <div class="-mr-2 flex items-center md:hidden">
@@ -40,7 +40,6 @@
                       class="bg-trueGrey-800 rounded-md p-2 inline-flex items-center justify-center text-blue-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300"
                       aria-expanded="false">
                       <span class="sr-only">Open main menu</span>
-                      <!-- Heroicon name: outline/menu -->
                       <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,22 +49,23 @@
                   </div>
                 </div>
               </div>
-              <div class="hidden md:block md:ml-16 md:space-x-8 text-blue-300 ">
-                <a href="#"
-                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Classes</a>
-                <a href="#"
-                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Instructors</a>
-                <a href="#"
-                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">About</a>
-                <a href="#"
-                  class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Contact
-                  Us</a>
-              </div>
+              <ul class="hidden md:block md:ml-16 md:space-x-8 text-blue-300 ">
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Classes</a>
+                </li>
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Instructors</a>
+                </li>
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">About</a>
+                </li>
+                <li class="inline"><a href="#"
+                    class="font-medium border-b-2 border-t-2 border-transparent hover:border-b-2 hover:border-t-2 hover:border-trueGrey-50 transform transition duration-200">Contact
+                    Us</a></li>
+              </ul>
             </nav>
           </div>
-
-          <!-- Mobile menu, show/hide based on menu open state. -->
-          <div x-show.transition.duration.150ms="menuOpen"
+          <div id="mobile__menu" x-show.transition.duration.150ms="menuOpen"
             class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div class="rounded-lg shadow-md bg-trueGrey-50 ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="px-5 pt-4 flex items-center justify-between">
@@ -101,7 +101,6 @@
                   <button @click="menuOpen = false" type="button"
                     class="bg-trueGrey-50 rounded-md p-2 inline-flex items-center justify-center text-trueGrey-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-300">
                     <span class="sr-only">Close main menu</span>
-                    <!-- Heroicon name: outline/x -->
                     <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                       stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -118,7 +117,6 @@
             </div>
           </div>
         </div>
-
         <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div class="sm:text-center lg:text-left">
             <h1 class="text-4xl tracking-tight font-bold text-grey-50 sm:text-5xl md:text-6xl">
@@ -127,20 +125,20 @@
             </h1>
             <p
               class="mt-3 text-base text-trueGrey-50 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+              Interested in getting fit, gaining confidence and learning an effective form of self defence?
+              Join us at Team Diamond, Nantwich's premier MMA gym.
             </p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
                 <a href="#"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-trueGrey-50 bg-blue-400 hover:bg-blue-500  md:py-4 md:text-lg md:px-10">
-                  Get started
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-trueGrey-50 bg-blue-400 hover:bg-blue-500 transform transition duration-200 md:py-4 md:text-lg md:px-10">
+                  Find out more!
                 </a>
               </div>
               <div class="mt-3 sm:mt-0 sm:ml-3">
                 <a href="#"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-400 bg-trueGrey-50 hover:bg-trueGrey-200 md:py-4 md:text-lg md:px-10">
-                  Live demo
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-400 bg-trueGrey-50 hover:bg-trueGrey-200 transform transition duration-200 md:py-4 md:text-lg md:px-10">
+                  Class Timetable
                 </a>
               </div>
             </div>
@@ -152,10 +150,139 @@
       <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="./img/hero-img.webp" alt="">
     </div>
   </div>
-  <section>
-    <div>
+  <section id="testimonials" class="mb-6">
+    <div class="w-full max-w-7xl mx-auto">
+      <h2 class="text-center font-semibold text-trueGrey-800 text-2xl">What our members say about us:</h2>
+      <div class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-x-6 mx-5 py-10 md:p-10">
+        <div
+          class="w-full mx-auto rounded-lg bg-white border border-trueGrey-200 p-5 text-trueGrey-800 font-light mb-6">
+          <div class="w-full flex mb-4 items-center">
+            <div class="overflow-hidden rounded-full w-10 h-10 bg-trueGrey-50 border border-trueGrey-200">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Testimonial Card Image">
+            </div>
+            <div class="flex-grow pl-3">
+              <h6 class="font-bold text-sm uppercase text-trueGrey-600">Kenzie Edgar.</h6>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-sm leading-tight"><span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 mr-1">"</span>Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi
+              architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 ml-1">"</span></p>
+          </div>
+        </div>
+        <div
+          class="w-full mx-auto rounded-lg bg-white border border-trueGrey-200 p-5 text-trueGrey-800 font-light mb-6">
+          <div class="w-full flex mb-4 items-center">
+            <div class="overflow-hidden rounded-full w-10 h-10 bg-trueGrey-50 border border-trueGrey-200">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Testimonial Card Image">
+            </div>
+            <div class="flex-grow pl-3">
+              <h6 class="font-bold text-sm uppercase text-trueGrey-600">Kenzie Edgar.</h6>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-sm leading-tight"><span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 mr-1">"</span>Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi
+              architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 ml-1">"</span></p>
+          </div>
+        </div>
+        <div
+          class="w-full mx-auto rounded-lg bg-white border border-trueGrey-200 p-5 text-trueGrey-800 font-light mb-6">
+          <div class="w-full flex mb-4 items-center">
+            <div class="overflow-hidden rounded-full w-10 h-10 bg-trueGrey-50 border border-trueGrey-200">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Testimonial Card Image">
+            </div>
+            <div class="flex-grow pl-3">
+              <h6 class="font-bold text-sm uppercase text-trueGrey-600">Kenzie Edgar.</h6>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-sm leading-tight"><span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 mr-1">"</span>Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi
+              architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 ml-1">"</span></p>
+          </div>
+        </div>
+        <div
+          class="w-full mx-auto rounded-lg bg-white border border-trueGrey-200 p-5 text-trueGrey-800 font-light mb-6">
+          <div class="w-full flex mb-4 items-center">
+            <div class="overflow-hidden rounded-full w-10 h-10 bg-trueGrey-50 border border-trueGrey-200">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Testimonial Card Image">
+            </div>
+            <div class="flex-grow pl-3">
+              <h6 class="font-bold text-sm uppercase text-trueGrey-600">Kenzie Edgar.</h6>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-sm leading-tight"><span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 mr-1">"</span>Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi
+              architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 ml-1">"</span></p>
+          </div>
+        </div>
+        <div
+          class="w-full mx-auto rounded-lg bg-white border border-trueGrey-200 p-5 text-trueGrey-800 font-light mb-6">
+          <div class="w-full flex mb-4 items-center">
+            <div class="overflow-hidden rounded-full w-10 h-10 bg-trueGrey-50 border border-trueGrey-200">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Testimonial Card Image">
+            </div>
+            <div class="flex-grow pl-3">
+              <h6 class="font-bold text-sm uppercase text-trueGrey-600">Kenzie Edgar.</h6>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-sm leading-tight"><span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 mr-1">"</span>Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi
+              architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 ml-1">"</span></p>
+          </div>
+        </div>
+        <div
+          class="w-full mx-auto rounded-lg bg-white border border-trueGrey-200 p-5 text-trueGrey-800 font-light mb-6">
+          <div class="w-full flex mb-4 items-center">
+            <div class="overflow-hidden rounded-full w-10 h-10 bg-trueGrey-50 border border-trueGrey-200">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Testimonial Card Image">
+            </div>
+            <div class="flex-grow pl-3">
+              <h6 class="font-bold text-sm uppercase text-trueGrey-600">Kenzie Edgar.</h6>
+            </div>
+          </div>
+          <div class="w-full">
+            <p class="text-sm leading-tight"><span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 mr-1">"</span>Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi
+              architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span
+                class="text-lg leading-none italic font-bold text-trueGrey-400 ml-1">"</span></p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  <footer class="bg-white">
+    <div
+      class="max-w-7xl mx-auto py-4 lg:py-10 px-4 sm:px-6 lg:px-8 md:flex md:items-center justify-center md:justify-between">
+      <div class="flex justify-center space-x-6 md:order-2">
+        <a href="mailto:beastmasters-nantwich@hotmail.com"
+          class="text-xl md:text-2xl transition transform duration-300 text-trueGrey-400 ease-in-out hover:scale-125 hover:text-blue-300"
+          alt="email"><i class="far fa-envelope"></i></a>
+        <a href="https://www.facebook.com/beastmastersnantwich/" target="_blank" rel="noopener noreferrer"
+          class="text-xl md:text-2xl transition transform duration-300 text-trueGrey-400 ease-in-out hover:scale-125 hover:text-blue-300"
+          alt="facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="mt-4 md:mt-0 md:order-1">
+        <p class="text-center text-base text-trueGrey-400">
+          &copy; 2021 Team Diamond. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 <script type="module" src="/main.js"></script>
