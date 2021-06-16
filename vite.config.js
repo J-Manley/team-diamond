@@ -6,6 +6,7 @@ module.exports = {
       input: {
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about.html"),
+        contact: resolve(__dirname, "about.html"),
       },
     },
   },
