@@ -17,6 +17,39 @@ module.exports = {
         blue: colors.lightBlue,
       },
 
+      keyframes: {
+        fade: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
+        slideInTop: {
+          "0%": { opacity: "0", transform: "translateY(-5%)" },
+
+          "100%": { opacity: "1", transform: "translateY(0%)" },
+        },
+        slideInLeft: {
+          "0%": { opacity: "0", transform: "translateX(-5%)" },
+
+          "100%": { opacity: "1", transform: "translateX(0%)" },
+        },
+        slideInRight: {
+          "0%": { opacity: "0", transform: "translateX(5%)" },
+
+          "100%": { opacity: "1", transform: "translateX(0%)" },
+        },
+        slideInBtm: {
+          "0%": { opacity: "0", transform: "translateY(5%)" },
+
+          "100%": { opacity: "1", transform: "translateY(0%)" },
+        },
+      },
+
+      animation: {
+        fade: "fade 500ms ease-in-out",
+        slideInTop: "slideInTop 500ms ease-in-out",
+        slideInLeft: "slideInLeft 350ms ease-in-out",
+        slideInRight: "slideInRight 350ms ease-in-out",
+        slideInFast: "slideInBtm 500ms ease-in-out",
+        slideInSlow: "slideInBtm 800ms ease-in-out",
+      },
+
       fontFamily: { rubik: ["'Rubik'", "helvetica", "sans-serif"] },
     },
   },
